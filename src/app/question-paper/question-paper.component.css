@@ -1,0 +1,30 @@
+table {
+  table-layout: fixed;
+  width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+}
+td,
+th {
+  text-align: center;
+  border: solid 1px black;
+}
+tr {
+  text-align: center;
+}
+
+.inputData {
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
+input {
+  margin: 20px;
+  border: solid 1px black;
+}
+
+select{
+    margin: 20px;
+    width:50px;
+    border: solid 1px black;
+}

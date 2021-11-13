@@ -1,0 +1,82 @@
+<div class="coForm">
+  <form action="" id="contactform" [formGroup]="coForm">
+    <table class="table table-bordered">
+      <thead>
+        <th>CO#</th>
+        <th>CO Statment</th>
+        <th>Bloom's Level</th>
+      </thead>
+      <tr>
+        <td>CO1</td>
+        <td>
+          <input type="text" class="d-flex flex-column rounded" formControlName='CO1' required><br>
+          <p class="inputData">
+            {{coForm.value.CO1}}
+          </p>
+        </td>
+        <td>
+          <select class="form-control"  formControlName="b1">
+            <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+          </select> 
+        </td>
+      </tr>
+      <tr>
+        <td>CO2</td>
+        <td>
+          <input type="text" class="d-flex flex-column rounded" formControlName='CO2' required><br>
+          <p class="inputData">
+            {{coForm.value.CO2}}
+          </p>
+        </td>
+        <td>
+          <select class="form-control"  formControlName="b2">
+            <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+          </select> 
+        </td>
+      </tr>
+      <tr>
+        <td>CO3</td>
+        <td>
+          <input type="text" class="d-flex flex-column rounded" formControlName='CO3' required><br>
+          <p class="inputData">
+            {{coForm.value.CO3}}
+          </p>
+        </td>
+        <td>
+          <select class="form-control"  formControlName="b3">
+            <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+          </select> 
+        </td>
+      </tr>
+      <tr>
+        <td>CO4</td>
+        <td>
+          <input type="text" class="d-flex flex-column rounded" formControlName='CO4' required><br>
+          <p class="inputData">
+            {{coForm.value.CO4}}
+          </p>
+        </td>
+        <td>
+          <select class="form-control"  formControlName="b4">
+            <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+          </select> 
+        </td>
+      </tr>
+      <tr>
+        <td>CO5</td>
+        <td>
+          <input type="text" class="d-flex flex-column rounded" formControlName='CO5' required><br>
+          <p class="inputData">
+            {{coForm.value.CO5}}
+          </p>
+        </td>
+        <td>
+          <select class="form-control"  formControlName="b5">
+            <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+          </select> 
+        </td>
+      </tr>
+    </table>
+  </form>
+  
+</div>

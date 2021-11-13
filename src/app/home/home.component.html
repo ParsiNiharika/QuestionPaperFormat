@@ -1,0 +1,27 @@
+<label for="regulation">Choose a regulation:</label><br>
+<select id="regulation" name="regulation" (click)="getRegulation($event.target.value)">
+    <option *ngFor="let i of data" value={{i}}>{{i}}</option>
+</select>
+<br>
+<br>
+<label for="courseId">Choose a Course:</label><br>
+<select id="courseId" name="courseId"  (click)="getCourseId($event.target.value)" >
+    <option *ngFor="let i of courseIds" value={{i}}>{{i}}</option>
+</select>
+<p>Subject:{{subject}}</p>
+
+<label for="sem">Choose a Semester:</label><br>
+<select id="sem" name="sem"  (click)="getSem($event.target.value)" >
+    <option *ngFor="let i of semester" value={{i}}>{{i}}</option>
+</select>
+<br>
+<label for="date">Enter Date:</label><br>
+<input type="date"><br>
+
+<label for="marks">Enter Marks:</label><br>
+<input type="number"><br>
+
+<label for="time">Enter Time:</label><br>
+<input type="number"><br>
+
+<button type="submit" (click)="go()">Open Question Paper</button>
