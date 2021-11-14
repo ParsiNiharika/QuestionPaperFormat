@@ -23,18 +23,14 @@ export class PaperFormatService {
     this.cid=cid;
     this.date=date;
     this.time=time;
-    this.marks=marks;
-    console.log("collected data");
-    console.log(time);
+    this.marks=marks;  
   }
 
   getCoData(coForm:any){
-     this.coData=coForm;
-     console.log(this.coData);
+     this.coData=coForm;  
   }
   getPartAData(partAForm:any){
-     this.partAData=partAForm;
-     console.log("partA");
+     this.partAData=partAForm; 
   }
   getSemPartBData(partBForm:any){
     this.semPartBData=partBForm;
@@ -45,5 +41,4 @@ export class PaperFormatService {
   checkIsMid(isMid){
     this.isMid=isMid;
   }
-  
 }
