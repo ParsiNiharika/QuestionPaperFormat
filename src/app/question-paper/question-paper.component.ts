@@ -10,10 +10,15 @@ export class QuestionPaperComponent implements OnInit {
   blooms;
    coForm: FormGroup;
    co:Array<String>;
+   isVisible:Boolean;
+   isMid:Boolean;
   constructor(
     private dataService:DataService,
      private fb: FormBuilder,
-  ) { }
+  ) {
+    this.isVisible=false;
+    this.isMid=false;
+   }
 
   ngOnInit(): void {
     this.co=['CO1','CO2','CO3','CO4','CO5'];
@@ -34,5 +39,17 @@ export class QuestionPaperComponent implements OnInit {
       console.log(this.coForm.value.b1)
     });
   }
+
+  visibility(){
+    this.isVisible=true;
+  }
+
+  mid(){
+    this.isMid=true;
+  }
+  sem(){
+    this.isMid=false;
+  }
+
 
 }

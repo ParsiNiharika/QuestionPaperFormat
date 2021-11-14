@@ -1,0 +1,194 @@
+<div class="coForm">
+    <form action="" id="contactform" [formGroup]="coForm">
+      <table class="table table-bordered">
+        <col style="width:3%">
+	      <col style="width:3%">
+	      <col style="width:50%">
+        <col style="width:8%">
+        <col style="width:8%">
+        <col style="width:8%">
+        <thead>
+            <caption>PART-A</caption>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>Course Outcome</th>
+            <th>Bloom’s Level</th>
+            <th>Marks</th>
+        </tr>
+        </thead>
+        
+        <tr>
+          <td>1.</td>
+          <td>a)</td>
+          <td>
+            <textarea class="d-flex flex-column rounded" formControlName='Q1' required rows="5" cols="70"></textarea><br>
+            <p class="inputData">
+              {{coForm.value.CO1}}
+            </p>
+          </td>
+          <td><input type="text" class="d-flex flex-column rounded" formControlName='CO1' required></td>
+          <td>
+            <select class="form-control"  formControlName="b1">
+              <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+            </select> 
+          </td>
+          <td><input type="text" class="d-flex flex-column rounded" formControlName='M1' required></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>b)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q2' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO2' required></td>
+            <td>
+              <select class="form-control"  formControlName="b2">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M2' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>c)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q3' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO3' required></td>
+            <td>
+              <select class="form-control"  formControlName="b3">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M3' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>d)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q4' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO4' required></td>
+            <td>
+              <select class="form-control"  formControlName="b4">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M4' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>e)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q5' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO5' required></td>
+            <td>
+              <select class="form-control"  formControlName="b5">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M5' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>f)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q6' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO6' required></td>
+            <td>
+              <select class="form-control"  formControlName="b6">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M6' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>g)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q7' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO7' required></td>
+            <td>
+              <select class="form-control"  formControlName="b7">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M7' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>h)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q8' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO8' required></td>
+            <td>
+              <select class="form-control"  formControlName="b8">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M8' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>i)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q9' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO9' required></td>
+            <td>
+              <select class="form-control"  formControlName="b9">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M9' required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>j)</td>
+            <td>
+              <textarea class="d-flex flex-column rounded" formControlName='Q10' required rows="5" cols="70"></textarea><br>
+              <p class="inputData">
+                {{coForm.value.CO1}}
+              </p>
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='CO10' required></td>
+            <td>
+              <select class="form-control"  formControlName="b10">
+                <option *ngFor="let i of blooms" [value]="i">{{i}}</option>
+              </select> 
+            </td>
+            <td><input type="text" class="d-flex flex-column rounded" formControlName='M10' required></td>
+          </tr>
+      </table>
+    </form> 
+  </div>

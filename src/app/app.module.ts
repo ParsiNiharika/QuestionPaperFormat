@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { QuestionPaperComponent } from './question-paper/question-paper.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PartAComponent } from './part-a/part-a.component';
+import { MidPartBComponent } from './mid-part-b/mid-part-b.component';
+import { SemPartBComponent } from './sem-part-b/sem-part-b.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    QuestionPaperComponent
+    QuestionPaperComponent,
+    PartAComponent,
+    MidPartBComponent,
+    SemPartBComponent
   ],
   imports: [
     BrowserModule,
