@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { DataService} from './data.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,18 +11,20 @@ export class PaperFormatService {
   cid;
   date;
   time;
+  subject;
   marks;
   coData;
   partAData;
   semPartBData;
   midPartBData;
   isMid=false;
-  constructor() { }
+  constructor( private dataService:DataService) { }
 
   getPaperMetaData(reg,sem,cid,date,time,marks){
     this.reg=reg;
     this.sem=sem;
     this.cid=cid;
+    this.subject=this.dataService.subjects[cid];
     this.date=date;
     this.time=time;
     this.marks=marks;  
@@ -29,6 +33,7 @@ export class PaperFormatService {
   getCoData(coForm:any){
      this.coData=coForm;  
   }
+
   getPartAData(partAForm:any){
      this.partAData=partAForm; 
   }

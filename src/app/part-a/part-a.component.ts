@@ -10,7 +10,7 @@ import { PaperFormatService } from '../paper-format.service';
 })
 export class PartAComponent implements OnInit {
    blooms;
-   coForm: FormGroup;
+   partA: FormGroup;
    co:Array<String>;
   constructor(
     private dataService:DataService,
@@ -21,7 +21,7 @@ export class PartAComponent implements OnInit {
   ngOnInit(): void {
     this.co=['CO1','CO2','CO3','CO4','CO5'];
     this.blooms=this.dataService.bloom;
-    this.coForm = this.fb.group({
+    this.partA = this.fb.group({
          Q1:[''],
          Q2:[''],
          Q3:[''],
@@ -63,8 +63,13 @@ export class PartAComponent implements OnInit {
          M9:[''],
          M10:[''],
     });
-    this.coForm.valueChanges.subscribe((value) => {
-      this.paperFormatService.getPartAData(this.coForm.value);
+    this.partA.valueChanges.subscribe((value) => {
+      for(let i in this.partA.value){
+        if(this.partA.value[i]==undefined){
+          this.partA.value[i]=" ";
+        }
+      }
+      this.paperFormatService.getPartAData(this.partA.value);
     });
   }
 

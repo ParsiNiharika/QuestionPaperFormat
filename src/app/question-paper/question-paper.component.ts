@@ -41,6 +41,12 @@ export class QuestionPaperComponent implements OnInit {
          b5:[''],
     });
     this.coForm.valueChanges.subscribe((value) => {
+      for(let i in this.coForm.value){
+        if(this.coForm.value[i]==undefined){
+          this.coForm.value[i]=" ";
+        }
+      }
+      console.log(this.coForm.value);
       this.paperFormatService.getCoData(this.coForm.value);
     });
   }

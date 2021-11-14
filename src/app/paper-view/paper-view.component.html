@@ -1,33 +1,68 @@
+<div class="Heading1">
+    <div class="hallTicket">
+      <p class="d-inline">Hall ticket:</p>
+      <img src="assets\HallTicket.jpg">
+    </div>
+      <p class="courseCode">Course Code: {{cid}}</p>
+  </div>
+  
+  <div class="title">
+    <div>
+      <img src="assets\WhatsApp Image 2021-11-14 at 7.18.49 PM.jpeg">
+    </div>
+    <div class="collegeDetails">
+      <h5 class="collegeName">VARDHAMAN COLLEGE OF ENGINEERING, HYDERABAD</h5>
+      <h6 class="autonomousInstitute">Autonomous institute, affiliated to JNTUH</h6>
+      <h6 class="semester">{{sem}} Continuous Assessment – II, June - 2021</h6>
+      <h6>(Regulations: VCE-{{reg}})</h6>
+      <h6>{{subject}}</h6>
+      <h6>(Common to CSE and IT) </h6>  
+    </div>
+  </div>
+  
+  <div class="DateTime">
+    <p class="date">Date: {{date}}</p>
+    <p class="time">Time: {{time}} Minutes</p>	
+    <p class="marks">Max Marks: {{marks}}</p>	       
+  </div>
+  <br>
+  <hr>
+  <div>  
+    <h5>Answer all Questions in Part-A</h5>
+    <h5>Answer any Three Questions in Part-B</h5>  
+  </div>
+  <hr>
+  
 <div class="coForm">
 
     <table class="table table-bordered">
-        <thead>
+        <thead class="text-center">
             <th>CO#</th>
             <th>CO Statment</th>
             <th>Bloom's Level</th>
         </thead>
         <tr>
-            <td>CO1</td>
+            <td class="text-center">CO1</td>
             <td>{{paperCOData.CO1}}</td>
             <td>{{paperCOData.b1}}</td>
         </tr>
         <tr>
-            <td>CO2</td>
+            <td class="text-center">CO2</td>
             <td>{{paperCOData.CO2}}</td>
             <td>{{paperCOData.b2}}</td>
         </tr>
         <tr>
-            <td>CO3</td>
+            <td class="text-center">CO3</td>
             <td>{{paperCOData.CO3}}</td>
             <td>{{paperCOData.b3}}</td>
         </tr>
         <tr>
-            <td>CO4</td>
+            <td class="text-center">CO4</td>
             <td>{{paperCOData.CO4}}</td>
             <td>{{paperCOData.b4}}</td>
         </tr>
         <tr>
-            <td>CO5</td>
+            <td class="text-center">CO5</td>
             <td>{{paperCOData.CO5}} </td>
             <td>{{paperCOData.b5}}</td>
         </tr>
@@ -36,7 +71,8 @@
 
 <!-- part-A -->
 
-<div class="coForm">
+      
+      <div class="coForm" >
 
     <table class="table table-bordered">
         <col style="width:3%">
@@ -47,9 +83,9 @@
         <col style="width:8%">
         <thead>
             <tr>
-                <td colspan="6">PART-A</td>
+                <td colspan="6" class="text-center">PART-A</td>
             </tr>
-            <tr>
+            <tr class="text-center">
                 <td colspan="3"></td>
                 <th>Course Outcome</th>
                 <th>Bloom’s Level</th>
@@ -58,8 +94,8 @@
         </thead>
 
         <tr>
-            <td>1.</td>
-            <td>a)</td>
+            <td class="text-center">1.</td>
+            <td class="text-center">a)</td>
             <td>{{paperPartA.Q1}} </td>
             <td>{{paperPartA.CO1}}</td>
             <td>{{paperPartA.b1}}</td>
@@ -67,7 +103,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>b)</td>
+            <td class="text-center">b)</td>
             <td>{{paperPartA.Q2}} </td>
             <td>{{paperPartA.CO2}}</td>
             <td>{{paperPartA.b2}}</td>
@@ -75,7 +111,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>c)</td>
+            <td class="text-center">c)</td>
             <td>{{paperPartA.Q3}} </td>
             <td>{{paperPartA.CO3}}</td>
             <td>{{paperPartA.b3}}</td>
@@ -83,7 +119,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>d)</td>
+            <td class="text-center">d)</td>
             <td>{{paperPartA.Q4}} </td>
             <td>{{paperPartA.CO4}}</td>
             <td>{{paperPartA.b4}}</td>
@@ -91,15 +127,15 @@
         </tr>
         <tr>
             <td></td>
-            <td>e)</td>
+            <td class="text-center">e)</td>
             <td>{{paperPartA.Q5}} </td>
             <td>{{paperPartA.CO5}}</td>
             <td>{{paperPartA.b5}}</td>
             <td>{{paperPartA.M5}}</td>
         </tr>
-        <tr>
+        <!-- <tr>
             <td></td>
-            <td>f)</td>
+            <td class="text-center">f)</td>
             <td>{{paperPartA.Q6}} </td>
             <td>{{paperPartA.CO6}}</td>
             <td>{{paperPartA.b6}}</td>
@@ -107,7 +143,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>g)</td>
+            <td class="text-center">g)</td>
             <td>{{paperPartA.Q7}} </td>
             <td>{{paperPartA.CO7}}</td>
             <td>{{paperPartA.b7}}</td>
@@ -115,7 +151,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>h)</td>
+            <td class="text-center">h)</td>
             <td>{{paperPartA.Q8}} </td>
             <td>{{paperPartA.CO8}}</td>
             <td>{{paperPartA.b8}}</td>
@@ -123,7 +159,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>i)</td>
+            <td class="text-center">i)</td>
             <td>{{paperPartA.Q9}} </td>
             <td>{{paperPartA.CO9}}</td>
             <td>{{paperPartA.b9}}</td>
@@ -131,14 +167,14 @@
         </tr>
         <tr>
             <td></td>
-            <td>j)</td>
+            <td class="text-center">j)</td>
             <td>{{paperPartA.Q10}} </td>
             <td>{{paperPartA.CO10}}</td>
             <td>{{paperPartA.b10}}</td>
             <td>{{paperPartA.M10}}</td>
-        </tr>
+        </tr> -->
         <tr>
-            <td colspan="6">PART-B</td>
+            <td colspan="6" class="text-center">PART-B</td>
         </tr>
         <tr>
             <td>2</td>
