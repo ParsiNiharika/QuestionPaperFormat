@@ -1,3 +1,88 @@
+.Heading1 {
+  width:1000px;
+  text-align:center;
+  display: block;
+  height:70px;
+  font-weight: bold;
+  margin-left:500px;
+}
+
+.hallTicket {
+  float:left;
+  width:400px;
+}
+
+.courseCode {
+  float:right;
+  width:600px;
+}
+
+.title{
+  display:flex;
+  margin-left: 600px;
+}
+
+hr{
+  width: 1000px;
+  margin:auto;
+}
+
+h5{
+  text-align: center;
+  font-style: Calibri;
+  font-size:15px;
+  font-weight: bold;
+}
+
+h6{
+  text-align: center;
+}
+
+.collegeName{
+  font-style: "Trebuchet MS";
+  font-size:18px;
+  font-weight: bold;
+}
+
+.autonomousInstitute{
+  font-style: "Trebuchet MS";
+  font-size:15px;
+  font-weight: bold;
+}
+
+.semester{
+  font-style: Calibri;
+  font-size:15px;
+}
+
+.DateTime {
+  width:1000px;
+  text-align:center;
+  display: block;
+  height:25px;
+  margin-top: 5px;
+  font-weight: bold;
+  margin-left:330px;
+}
+
+.date {
+  float:left;
+  width:400px;
+}
+
+.time {
+  display: inline-block;
+  margin:0 auto;
+  width:250px;
+}
+
+.marks {
+  text-align: right;
+  float:right;
+  width:330px;
+  margin:0px;
+}
+
 table {
   table-layout: fixed;
   width: 1000px;
