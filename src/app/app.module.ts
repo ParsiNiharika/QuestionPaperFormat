@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PartAComponent } from './part-a/part-a.component';
 import { MidPartBComponent } from './mid-part-b/mid-part-b.component';
 import { SemPartBComponent } from './sem-part-b/sem-part-b.component';
+import { PaperViewComponent } from './paper-view/paper-view.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SemPartBComponent } from './sem-part-b/sem-part-b.component';
     QuestionPaperComponent,
     PartAComponent,
     MidPartBComponent,
-    SemPartBComponent
+    SemPartBComponent,
+    PaperViewComponent
   ],
   imports: [
     BrowserModule,

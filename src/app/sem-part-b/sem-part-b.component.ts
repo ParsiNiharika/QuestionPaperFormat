@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService} from '../data.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PaperFormatService } from '../paper-format.service';
 
 @Component({
   selector: 'app-sem-part-b',
@@ -15,6 +16,7 @@ export class SemPartBComponent implements OnInit {
   constructor(
     private dataService:DataService,
     private fb: FormBuilder,
+    private paperFormatService:PaperFormatService
   ) { }
 
   ngOnInit(): void {
@@ -103,7 +105,7 @@ export class SemPartBComponent implements OnInit {
          M5D:[''],
     });
     this.coForm.valueChanges.subscribe((value) => {
-      console.log(this.coForm.value.b1)
+      this.paperFormatService.getSemPartBData(this.coForm.value);
     });
   }
 

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService} from '../data.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PaperFormatService } from '../paper-format.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-question-paper',
   templateUrl: './question-paper.component.html',
@@ -15,6 +18,8 @@ export class QuestionPaperComponent implements OnInit {
   constructor(
     private dataService:DataService,
      private fb: FormBuilder,
+     private paperFormatService:PaperFormatService,
+     private router: Router
   ) {
     this.isVisible=false;
     this.isMid=false;
@@ -36,7 +41,7 @@ export class QuestionPaperComponent implements OnInit {
          b5:[''],
     });
     this.coForm.valueChanges.subscribe((value) => {
-      console.log(this.coForm.value.b1)
+      this.paperFormatService.getCoData(this.coForm.value);
     });
   }
 
@@ -46,10 +51,14 @@ export class QuestionPaperComponent implements OnInit {
 
   mid(){
     this.isMid=true;
+    this.paperFormatService.checkIsMid(this.isMid);
   }
   sem(){
     this.isMid=false;
+    this.paperFormatService.checkIsMid(this.isMid);
   }
-
+  moveToPaper(){
+    this.router.navigateByUrl('/paperView');
+  }
 
 }
