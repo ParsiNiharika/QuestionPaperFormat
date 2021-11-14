@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PaperFormatService } from '../paper-format.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,10 @@ export class HomeComponent implements OnInit {
   sem;
   reg;
   cid;
-  constructor(private dataService: DataService, private router: Router) {}
+  time;
+  marks;
+  date;
+  constructor(private dataService: DataService, private router: Router,private paperFormatService:PaperFormatService) {}
 
   ngOnInit(): void {
     this.data = this.dataService.regulations;
@@ -37,9 +41,13 @@ export class HomeComponent implements OnInit {
   getSem(sem) {
     this.sem = sem;
   }
-
+ 
   go() {
     console.log('Hello');
+    var date:any=document.getElementById("date");
+    var time:any =document.getElementById("time");
+    var marks:any=document.getElementById("marks");
+    this.paperFormatService.getPaperMetaData(this.reg,this.sem,this.cid,date.value,time.value,marks.value);
     this.router.navigate([this.reg, this.sem, this.cid]);
   }
 }

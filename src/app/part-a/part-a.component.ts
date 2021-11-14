@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService} from '../data.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PaperFormatService } from '../paper-format.service';
 
 @Component({
   selector: 'app-part-a',
@@ -14,6 +15,7 @@ export class PartAComponent implements OnInit {
   constructor(
     private dataService:DataService,
     private fb: FormBuilder,
+    private paperFormatService:PaperFormatService
   ) { }
 
   ngOnInit(): void {
@@ -62,7 +64,7 @@ export class PartAComponent implements OnInit {
          M10:[''],
     });
     this.coForm.valueChanges.subscribe((value) => {
-      console.log(this.coForm.value.b1)
+      this.paperFormatService.getPartAData(this.coForm.value);
     });
   }
 
