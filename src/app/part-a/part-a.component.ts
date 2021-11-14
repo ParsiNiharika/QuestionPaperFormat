@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./part-a.component.css']
 })
 export class PartAComponent implements OnInit {
-  blooms;
+   blooms;
    coForm: FormGroup;
    co:Array<String>;
   constructor(
