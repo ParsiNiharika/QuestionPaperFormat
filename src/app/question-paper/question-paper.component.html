@@ -80,15 +80,17 @@
   </form> 
 </div>
 <app-part-a></app-part-a>
-<button type="submit" (click)="visibility()" (click)="mid()">MID PAPER</button>
+<app-mid-part-b></app-mid-part-b>
+<div>
+  <button class="btn btn-primary mt-2 mb-2 text-center" (click)="moveToPaper()">Genrate paper</button>
+</div>
+<!-- <button type="submit" (click)="visibility()" (click)="mid()">MID PAPER</button>
 <button type="submit" (click)="visibility()" (click)="sem()">SEMESTER PAPER</button>
+
 <div *ngIf= "isVisible && isMid">
   <app-mid-part-b></app-mid-part-b>
 </div>
 
 <div *ngIf= "isVisible && !isMid">
   <app-sem-part-b></app-sem-part-b>
-</div>
-<div>
-  <button (click)="moveToPaper()">Genrate paper</button>
-</div>
+</div> -->

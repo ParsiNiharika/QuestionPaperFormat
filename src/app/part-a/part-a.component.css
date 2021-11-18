@@ -29,14 +29,19 @@ tr {
 input {
   width: 50px;
   border: solid 1px black;
+  margin:auto;
 }
 
 select {
   width: 50px;
   border: solid 1px black;
+  margin:auto;
 }
+
 textarea {
   border: solid 1px black;
+  margin:auto;
+  margin-top: 10px;
 }
 
 

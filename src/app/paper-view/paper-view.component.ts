@@ -18,7 +18,10 @@ export class PaperViewComponent implements OnInit {
   time;
   marks;
   subject;
+  partBImg;
   isDataAvailable:boolean;
+  selectedBranches:Array<string>;
+  branchTitle:String;
 
   constructor(private paperFormatService:PaperFormatService) { 
     this.isDataAvailable=false
@@ -35,11 +38,25 @@ export class PaperViewComponent implements OnInit {
     this.isMid=this.paperFormatService.isMid;
     this.paperCOData=this.paperFormatService.coData;
     this.paperPartA=this.paperFormatService.partAData;
-    console.log(this.paperCOData);
-    if(this.isMid){
-      this.paperPartB=this.paperFormatService.midPartBData;
-    }else{
-      this.paperPartB=this.paperFormatService.semPartBData;
+    this.paperPartB=this.paperFormatService.midPartBData;
+    this.partBImg=this.paperFormatService.partBImgs;
+    this.selectedBranches=this.paperFormatService.selectedBranch;
+    console.log(this.paperPartA);
+    if(this.selectedBranches.length==1){
+      this.branchTitle=this.selectedBranches[0]
     }
+    else{
+      this.branchTitle="Common to"
+      for(var branch of this.selectedBranches){
+        this.branchTitle = this.branchTitle.concat(" "+branch+ ",")
+      }
+      this.branchTitle=this.branchTitle.slice(0, -1);
+    }
+    console.log(this.branchTitle)
+    // if(this.isMid){
+    //   this.paperPartB=this.paperFormatService.midPartBData;
+    // }else{
+    //   this.paperPartB=this.paperFormatService.semPartBData;
+    // }
   }
 }

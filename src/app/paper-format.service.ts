@@ -18,16 +18,19 @@ export class PaperFormatService {
   semPartBData;
   midPartBData;
   isMid=false;
+  partBImgs: any;
+  selectedBranch=[];
   constructor( private dataService:DataService) { }
 
-  getPaperMetaData(reg,sem,cid,date,time,marks){
+  getPaperMetaData(reg,sem,cid,date,time,marks,selectedBranch){
     this.reg=reg;
     this.sem=sem;
     this.cid=cid;
     this.subject=this.dataService.subjects[cid];
     this.date=date;
     this.time=time;
-    this.marks=marks;  
+    this.marks=marks; 
+    this.selectedBranch=selectedBranch; 
   }
 
   getCoData(coForm:any){
@@ -45,5 +48,8 @@ export class PaperFormatService {
   }
   checkIsMid(isMid){
     this.isMid=isMid;
+  }
+  getImgs(partBImgs){
+    this.partBImgs=partBImgs
   }
 }

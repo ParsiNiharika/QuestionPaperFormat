@@ -100,4 +100,28 @@ table {
 table{
   border-collapse: collapse;
 }
+
+.coForm th:nth-child(1),.coForm th:nth-child(3){
+  text-align: center;
+  font-style: italic;
+} 
+
+.coForm th:nth-child(2){
+  font-style: italic;
+}
+
+.coForm td:nth-child(1),.coForm td:nth-child(3){
+  text-align: center;
+}
+
+.topicHeading{
+  text-align: center;
+  font-weight:bold ;
+
+}
+
+.sideHeading{
+  font-weight: bold;
+  text-decoration: underline;
+}
  

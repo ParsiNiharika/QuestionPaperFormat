@@ -21,12 +21,13 @@ tr {
 }
 
 input {
-  margin: 20px;
   border: solid 1px black;
+  margin:auto;
+  margin-top: 50px;
 }
 
 select{
-    margin: 20px;
     width:50px;
     border: solid 1px black;
+    margin:auto;
 }

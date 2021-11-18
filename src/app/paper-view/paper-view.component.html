@@ -1,68 +1,70 @@
 <div class="Heading1">
     <div class="hallTicket">
-      <p class="d-inline">Hall ticket:</p>
-      <img src="assets\HallTicket.jpg">
+        <p class="d-inline">Hall ticket:</p>
+        <img src="assets\HallTicket.jpg">
     </div>
-      <p class="courseCode">Course Code: {{cid}}</p>
-  </div>
-  
-  <div class="title">
+    <p class="courseCode">Course Code: {{cid}}</p>
+</div>
+
+<div class="title">
     <div>
-      <img src="assets\WhatsApp Image 2021-11-14 at 7.18.49 PM.jpeg">
+        <img src="assets\WhatsApp Image 2021-11-14 at 7.18.49 PM.jpeg">
     </div>
     <div class="collegeDetails">
-      <h5 class="collegeName">VARDHAMAN COLLEGE OF ENGINEERING, HYDERABAD</h5>
-      <h6 class="autonomousInstitute">Autonomous institute, affiliated to JNTUH</h6>
-      <h6 class="semester">{{sem}} Continuous Assessment – II, June - 2021</h6>
-      <h6>(Regulations: VCE-{{reg}})</h6>
-      <h6>{{subject}}</h6>
-      <h6>(Common to CSE and IT) </h6>  
+        <h5 class="collegeName">VARDHAMAN COLLEGE OF ENGINEERING, HYDERABAD</h5>
+        <h6 class="autonomousInstitute">Autonomous institute, affiliated to JNTUH</h6>
+        <h6 class="semester">{{sem}} Continuous Assessment – II, June - 2021</h6>
+        <h6>(Regulations: VCE-{{reg}})</h6>
+        <h6>{{subject}}</h6>
     </div>
-  </div>
-  
-  <div class="DateTime">
+</div>
+<h6> {{branchTitle}} </h6>
+<div class="DateTime">
     <p class="date">Date: {{date}}</p>
-    <p class="time">Time: {{time}} Minutes</p>	
-    <p class="marks">Max Marks: {{marks}}</p>	       
-  </div>
-  <br>
-  <hr>
-  <div>  
+    <p class="time">Time: {{time}} Minutes</p>
+    <p class="marks">Max Marks: {{marks}}</p>
+</div>
+<br>
+<hr>
+<div>
     <h5>Answer all Questions in Part-A</h5>
-    <h5>Answer any Three Questions in Part-B</h5>  
-  </div>
-  <hr>
-  
-<div class="coForm">
+    <h5>Answer any Three Questions in Part-B</h5>
+</div>
+<hr>
 
+<div class="coForm">
+    <p class="sideHeading">Course Outcomes with Bloom’s Levels:</p>
     <table class="table table-bordered">
-        <thead class="text-center">
+        <col style="width:7%">
+        <col style="width:50%">
+        <col style="width:7%">
+        <thead>
             <th>CO#</th>
             <th>CO Statment</th>
-            <th>Bloom's Level</th>
+            <th>Bloom's Level(L#)</th>
         </thead>
         <tr>
-            <td class="text-center">CO1</td>
+            <td>CO1</td>
             <td>{{paperCOData.CO1}}</td>
             <td>{{paperCOData.b1}}</td>
         </tr>
         <tr>
-            <td class="text-center">CO2</td>
+            <td>CO2</td>
             <td>{{paperCOData.CO2}}</td>
             <td>{{paperCOData.b2}}</td>
         </tr>
         <tr>
-            <td class="text-center">CO3</td>
+            <td>CO3</td>
             <td>{{paperCOData.CO3}}</td>
             <td>{{paperCOData.b3}}</td>
         </tr>
         <tr>
-            <td class="text-center">CO4</td>
+            <td>CO4</td>
             <td>{{paperCOData.CO4}}</td>
             <td>{{paperCOData.b4}}</td>
         </tr>
         <tr>
-            <td class="text-center">CO5</td>
+            <td>CO5</td>
             <td>{{paperCOData.CO5}} </td>
             <td>{{paperCOData.b5}}</td>
         </tr>
@@ -71,9 +73,9 @@
 
 <!-- part-A -->
 
-      
-      <div class="coForm" >
 
+<div class="questionPaper">
+    <p class="sideHeading">Questions:</p>
     <table class="table table-bordered">
         <col style="width:3%">
         <col style="width:3%">
@@ -83,9 +85,9 @@
         <col style="width:8%">
         <thead>
             <tr>
-                <td colspan="6" class="text-center">PART-A</td>
+                <td colspan="6" class="topicHeading">PART-A</td>
             </tr>
-            <tr class="text-center">
+            <tr>
                 <td colspan="3"></td>
                 <th>Course Outcome</th>
                 <th>Bloom’s Level</th>
@@ -94,8 +96,8 @@
         </thead>
 
         <tr>
-            <td class="text-center">1.</td>
-            <td class="text-center">a)</td>
+            <td>1.</td>
+            <td>a)</td>
             <td>{{paperPartA.Q1}} </td>
             <td>{{paperPartA.CO1}}</td>
             <td>{{paperPartA.b1}}</td>
@@ -103,7 +105,7 @@
         </tr>
         <tr>
             <td></td>
-            <td class="text-center">b)</td>
+            <td>b)</td>
             <td>{{paperPartA.Q2}} </td>
             <td>{{paperPartA.CO2}}</td>
             <td>{{paperPartA.b2}}</td>
@@ -111,23 +113,23 @@
         </tr>
         <tr>
             <td></td>
-            <td class="text-center">c)</td>
+            <td>c)</td>
             <td>{{paperPartA.Q3}} </td>
             <td>{{paperPartA.CO3}}</td>
             <td>{{paperPartA.b3}}</td>
             <td>{{paperPartA.M3}}</td>
         </tr>
-        <tr>
+        <tr *ngIf="paperPartA.Q4!=''">
             <td></td>
-            <td class="text-center">d)</td>
+            <td>d)</td>
             <td>{{paperPartA.Q4}} </td>
             <td>{{paperPartA.CO4}}</td>
             <td>{{paperPartA.b4}}</td>
             <td>{{paperPartA.M4}}</td>
         </tr>
-        <tr>
+        <tr  *ngIf="paperPartA.Q5!=''">
             <td></td>
-            <td class="text-center">e)</td>
+            <td>e)</td>
             <td>{{paperPartA.Q5}} </td>
             <td>{{paperPartA.CO5}}</td>
             <td>{{paperPartA.b5}}</td>
@@ -135,7 +137,7 @@
         </tr>
         <!-- <tr>
             <td></td>
-            <td class="text-center">f)</td>
+            <td>f)</td>
             <td>{{paperPartA.Q6}} </td>
             <td>{{paperPartA.CO6}}</td>
             <td>{{paperPartA.b6}}</td>
@@ -143,7 +145,7 @@
         </tr>
         <tr>
             <td></td>
-            <td class="text-center">g)</td>
+            <td>g)</td>
             <td>{{paperPartA.Q7}} </td>
             <td>{{paperPartA.CO7}}</td>
             <td>{{paperPartA.b7}}</td>
@@ -151,7 +153,7 @@
         </tr>
         <tr>
             <td></td>
-            <td class="text-center">h)</td>
+            <td>h)</td>
             <td>{{paperPartA.Q8}} </td>
             <td>{{paperPartA.CO8}}</td>
             <td>{{paperPartA.b8}}</td>
@@ -159,7 +161,7 @@
         </tr>
         <tr>
             <td></td>
-            <td class="text-center">i)</td>
+            <td>i)</td>
             <td>{{paperPartA.Q9}} </td>
             <td>{{paperPartA.CO9}}</td>
             <td>{{paperPartA.b9}}</td>
@@ -167,19 +169,22 @@
         </tr>
         <tr>
             <td></td>
-            <td class="text-center">j)</td>
+            <td>j)</td>
             <td>{{paperPartA.Q10}} </td>
             <td>{{paperPartA.CO10}}</td>
             <td>{{paperPartA.b10}}</td>
             <td>{{paperPartA.M10}}</td>
         </tr> -->
         <tr>
-            <td colspan="6" class="text-center">PART-B</td>
+            <td colspan="6" class="topicHeading">PART-B</td>
         </tr>
         <tr>
             <td>2</td>
             <td>a)</td>
-            <td>{{paperPartB.Q1A}} </td>
+            <td>
+                {{paperPartB.Q1A}} <br>
+                <img *ngFor="let url of partBImg['img1A']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO1A}}</td>
             <td>{{paperPartB.b1A}}</td>
             <td>{{paperPartB.M1A}}</td>
@@ -187,16 +192,22 @@
         <tr>
             <td></td>
             <td>b)</td>
-            <td>{{paperPartB.Q1B}} </td>
+            <td>{{paperPartB.Q1B}} <br>
+            <img *ngFor="let url of partBImg['img1B']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO1B}}</td>
             <td>{{paperPartB.b1B}}</td>
             <td>{{paperPartB.M1B}}</td>
         </tr>
-        <tr ><td colspan="6" style="padding:15px;"></td></tr>
+        <tr>
+            <td colspan="6" style="padding:15px;"></td>
+        </tr>
         <tr>
             <td>3</td>
             <td>a)</td>
-            <td>{{paperPartB.Q2A}} </td>
+            <td>{{paperPartB.Q2A}}<br>
+            <img *ngFor="let url of partBImg['img2A']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO2A}}</td>
             <td>{{paperPartB.b2A}}</td>
             <td>{{paperPartB.M2A}}</td>
@@ -204,16 +215,22 @@
         <tr>
             <td></td>
             <td>b)</td>
-            <td>{{paperPartB.Q2B}} </td>
+            <td>{{paperPartB.Q2B}} <br>
+            <img *ngFor="let url of partBImg['img2B']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO2B}}</td>
             <td>{{paperPartB.b2B}}</td>
             <td>{{paperPartB.M2B}}</td>
         </tr>
-        <tr ><td colspan="6" style="padding:15px;"></td></tr>
+        <tr>
+            <td colspan="6" style="padding:15px;"></td>
+        </tr>
         <tr>
             <td>4</td>
             <td>a)</td>
-            <td>{{paperPartB.Q3A}} </td>
+            <td>{{paperPartB.Q3A}} <br>
+            <img *ngFor="let url of partBImg['img3A']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO3A}}</td>
             <td>{{paperPartB.b3A}}</td>
             <td>{{paperPartB.M3A}}</td>
@@ -221,16 +238,22 @@
         <tr>
             <td></td>
             <td>b)</td>
-            <td>{{paperPartB.Q3B}} </td>
+            <td>{{paperPartB.Q3B}} <br>
+            <img *ngFor="let url of partBImg['img3B']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO3B}}</td>
             <td>{{paperPartB.b3B}}</td>
             <td>{{paperPartB.M3B}}</td>
         </tr>
-        <tr ><td colspan="6" style="padding:15px;"></td></tr>
+        <tr>
+            <td colspan="6" style="padding:15px;"></td>
+        </tr>
         <tr>
             <td>5</td>
             <td>a)</td>
-            <td>{{paperPartB.Q4A}} </td>
+            <td>{{paperPartB.Q4A}} <br>
+            <img *ngFor="let url of partBImg['img4A']" [src]="url" alt="" width="300" height="300">
+        </td>
             <td>{{paperPartB.CO4A}}</td>
             <td>{{paperPartB.b4A}}</td>
             <td>{{paperPartB.M4A}}</td>
@@ -238,16 +261,22 @@
         <tr>
             <td></td>
             <td>b)</td>
-            <td>{{paperPartB.Q4B}} </td>
+            <td>{{paperPartB.Q4B}} <br>
+            <img *ngFor="let url of partBImg['img4B']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO4B}}</td>
             <td>{{paperPartB.b4B}}</td>
             <td>{{paperPartB.M4B}}</td>
         </tr>
-        <tr ><td colspan="6" style="padding:15px;"></td></tr>
+        <tr>
+            <td colspan="6" style="padding:15px;"></td>
+        </tr>
         <tr>
             <td>6</td>
             <td>a)</td>
-            <td>{{paperPartB.Q5A}} </td>
+            <td>{{paperPartB.Q5A}} <br>
+            <img *ngFor="let url of partBImg['img5A']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO5A}}</td>
             <td>{{paperPartB.b5A}}</td>
             <td>{{paperPartB.M5A}}</td>
@@ -255,7 +284,9 @@
         <tr>
             <td></td>
             <td>b)</td>
-            <td>{{paperPartB.Q5B}} </td>
+            <td>{{paperPartB.Q5B}} <br>
+            <img *ngFor="let url of partBImg['img5B']" [src]="url" alt="" width="300" height="300">
+            </td>
             <td>{{paperPartB.CO5B}}</td>
             <td>{{paperPartB.b5B}}</td>
             <td>{{paperPartB.M5B}}</td>

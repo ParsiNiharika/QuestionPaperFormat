@@ -13,6 +13,7 @@ export class MidPartBComponent implements OnInit {
    blooms;
    coForm: FormGroup;
    co:Array<String>;
+   imgs={'img1A':[],'img1B':[],'img2A':[],'img2B':[],'img3A':[],'img3B':[],'img4A':[],'img4B':[],'img5A':[],'img5B':[]}
 
   constructor(
     private dataService:DataService,
@@ -70,4 +71,24 @@ export class MidPartBComponent implements OnInit {
     });
   }
 
-}
+  selectFiles(event,targetImg) {
+    if(event.target.files){
+      for(var i=0;i<File.length;i++){
+        var reader = new FileReader();
+        reader.readAsDataURL(event.target.files[i]);
+        reader.onload = (event: any) =>{
+            this.imgs[targetImg].push(event.target.result);
+            console.log("hello")
+          }
+        this.paperFormatService.getImgs(this.imgs);
+        }
+      }
+    }
+
+    removeFile(targetImg){
+      this.imgs[targetImg]=[];
+      this.paperFormatService.getImgs(this.imgs);
+    }
+  }
+
+  

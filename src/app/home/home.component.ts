@@ -19,6 +19,9 @@ export class HomeComponent implements OnInit {
   time;
   marks;
   date;
+  urls=[];
+  selectedBranch:Array<String>=[];
+  branches=["Computer Science & Engineering", "Information Technology", "Electronics & Communication Engineering", "Electrical & Electronics Engineering", "Mechnical Engineering", "Civil Engineering", "Artificial Intelligence & Machine Learning", "Artificial Intelligence & Data Science" ];
   constructor(private dataService: DataService, private router: Router,private paperFormatService:PaperFormatService) {}
 
   ngOnInit(): void {
@@ -47,7 +50,18 @@ export class HomeComponent implements OnInit {
     var date:any=document.getElementById("date");
     var time:any =document.getElementById("time");
     var marks:any=document.getElementById("marks");
-    this.paperFormatService.getPaperMetaData(this.reg,this.sem,this.cid,date.value,time.value,marks.value);
+    this.paperFormatService.getPaperMetaData(this.reg,this.sem,this.cid,date.value,time.value,marks.value, this.selectedBranch);
     this.router.navigate([this.reg, this.sem, this.cid]);
   }
+   
+  checkBoxValue(branchName, isChecked){
+    if (isChecked) {
+      this.selectedBranch.push(branchName);
+    } else {
+      this.selectedBranch = this.selectedBranch.filter(item => item !== branchName)
+    }
+    console.log(this.selectedBranch)
+  }  
+
+  
 }

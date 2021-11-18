@@ -8,11 +8,12 @@
         <col style="width:8%">
         <col style="width:8%">
         <thead>
-            <caption>PART-A</caption>
           <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th colspan="6">PART-B</th>
+          </tr>
+          <tr>
+          <tr>
+            <th colspan="3" ></th>
             <th>Course Outcome</th>
             <th>Bloom’s Level</th>
             <th>Marks</th>
@@ -24,9 +25,11 @@
           <td>a)</td>
           <td>
             <textarea class="d-flex flex-column rounded" formControlName='Q1A' required rows="5" cols="70"></textarea><br>
-            <p class="inputData">
-              {{coForm.value.CO1}}
-            </p>
+            <img *ngFor="let url of imgs['img1A']" [src]="url" alt="" width="300" height="300">
+            <br>
+            <input type="file" (change) =" selectFiles($event,'img1A')" class="imgInput" multiple>
+            <br>
+            <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img1A')">Remove Photos</button>
           </td>
           <td><input type="text" class="d-flex flex-column rounded" formControlName='CO1A' required></td>
           <td>
@@ -41,9 +44,11 @@
             <td>b)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q1B' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img1B']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img1B')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img1B')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO1B' required></td>
             <td>
@@ -58,9 +63,11 @@
             <td>a)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q2A' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img2A']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img2A')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img2A')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO2A' required></td>
             <td>
@@ -75,9 +82,11 @@
             <td>b)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q2B' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img2B']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img2B')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img2B')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO2B' required></td>
             <td>
@@ -92,9 +101,11 @@
             <td>a)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q3A' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img3A']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img3A')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img3A')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO3A' required></td>
             <td>
@@ -109,9 +120,11 @@
             <td>b)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q3B' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img3B']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img3B')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img3B')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO3B' required></td>
             <td>
@@ -126,9 +139,11 @@
             <td>a)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q4A' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img4A']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img4A')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img4A')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO4A' required></td>
             <td>
@@ -143,9 +158,11 @@
             <td>b)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q4B' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img4B']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img4B')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img4B')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO4B' required></td>
             <td>
@@ -160,9 +177,11 @@
             <td>a)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q5A' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img5A']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img5A')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img5A')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO5A' required></td>
             <td>
@@ -177,9 +196,11 @@
             <td>b)</td>
             <td>
               <textarea class="d-flex flex-column rounded" formControlName='Q5B' required rows="5" cols="70"></textarea><br>
-              <p class="inputData">
-                {{coForm.value.CO1}}
-              </p>
+              <img *ngFor="let url of imgs['img5B']" [src]="url" alt="" width="300" height="300">
+              <br>
+              <input type="file" (change) =" selectFiles($event,'img5B')" class="imgInput" multiple>
+              <br>
+              <button class="border bg-dark text-white m-2 w-50" (click)="removeFile('img5B')">Remove Photos</button>
             </td>
             <td><input type="text" class="d-flex flex-column rounded" formControlName='CO5B' required></td>
             <td>
@@ -192,3 +213,5 @@
       </table>
     </form> 
   </div>
+
+
