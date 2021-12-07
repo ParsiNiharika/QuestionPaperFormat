@@ -5,19 +5,16 @@
     </div>
     <p class="courseCode">Course Code: {{cid}}</p>
 </div>
+<div class="logoImage">
+    <img src="assets\vardhaman_logo.png">
+</div>
 
-<div class="title">
-    <div>
-        <img src="assets\WhatsApp Image 2021-11-14 at 7.18.49 PM.jpeg">
-    </div>
     <div class="collegeDetails">
-        <h5 class="collegeName">VARDHAMAN COLLEGE OF ENGINEERING, HYDERABAD</h5>
-        <h6 class="autonomousInstitute">Autonomous institute, affiliated to JNTUH</h6>
-        <h6 class="semester">{{sem}} Continuous Assessment – II, June - 2021</h6>
+        <h6 class="semester">{{sem}} Continuous Assessment – {{midNo}}, {{months[dateFullFormat.getMonth()]}} - {{dateFullFormat.getFullYear()}}</h6>
         <h6>(Regulations: VCE-{{reg}})</h6>
         <h6>{{subject}}</h6>
     </div>
-</div>
+
 <h6> {{branchTitle}} </h6>
 <div class="DateTime">
     <p class="date">Date: {{date}}</p>

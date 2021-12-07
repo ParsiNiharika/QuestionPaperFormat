@@ -7,6 +7,7 @@ import { PaperFormatService } from '../paper-format.service';
   styleUrls: ['./paper-view.component.css']
 })
 export class PaperViewComponent implements OnInit {
+  months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   paperCOData:any;
   paperPartA:any;
   paperPartB:any;
@@ -15,10 +16,12 @@ export class PaperViewComponent implements OnInit {
   sem;
   cid;
   date;
+  dateFullFormat;
   time;
   marks;
   subject;
   partBImg;
+  midNo;
   isDataAvailable:boolean;
   selectedBranches:Array<string>;
   branchTitle:String;
@@ -31,7 +34,9 @@ export class PaperViewComponent implements OnInit {
     this.reg=this.paperFormatService.reg;
     this.sem=this.paperFormatService.sem;
     this.cid=this.paperFormatService.cid;
+    this.midNo=this.paperFormatService.midNo;
     this.date=this.paperFormatService.date;
+    this.dateFullFormat=new Date(this.date)
     this.time=this.paperFormatService.time;
     this.marks=this.paperFormatService.marks;
     this.subject=this.paperFormatService.subject;  
@@ -41,7 +46,6 @@ export class PaperViewComponent implements OnInit {
     this.paperPartB=this.paperFormatService.midPartBData;
     this.partBImg=this.paperFormatService.partBImgs;
     this.selectedBranches=this.paperFormatService.selectedBranch;
-    console.log(this.paperPartA);
     if(this.selectedBranches.length==1){
       this.branchTitle=this.selectedBranches[0]
     }
@@ -52,7 +56,6 @@ export class PaperViewComponent implements OnInit {
       }
       this.branchTitle=this.branchTitle.slice(0, -1);
     }
-    console.log(this.branchTitle)
     // if(this.isMid){
     //   this.paperPartB=this.paperFormatService.midPartBData;
     // }else{

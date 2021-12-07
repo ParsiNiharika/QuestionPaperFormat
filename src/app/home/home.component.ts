@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   time;
   marks;
   date;
+  midNo;
   urls=[];
   selectedBranch:Array<String>=[];
   branches=["Computer Science & Engineering", "Information Technology", "Electronics & Communication Engineering", "Electrical & Electronics Engineering", "Mechnical Engineering", "Civil Engineering", "Artificial Intelligence & Machine Learning", "Artificial Intelligence & Data Science" ];
@@ -27,14 +28,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.data = this.dataService.regulations;
     this.semester = this.dataService.semester;
-    console.log(this.data);
   }
 
   getRegulation(reg) {
-    console.log(reg);
     this.reg = reg;
     this.courseIds = this.dataService.courseId[reg];
-    console.log(this.courseIds);
   }
   getCourseId(id) {
     this.cid = id;
@@ -44,13 +42,16 @@ export class HomeComponent implements OnInit {
   getSem(sem) {
     this.sem = sem;
   }
+
+  getMidNo(midNo){
+    this.midNo=midNo;
+  }
  
   go() {
-    console.log('Hello');
     var date:any=document.getElementById("date");
     var time:any =document.getElementById("time");
     var marks:any=document.getElementById("marks");
-    this.paperFormatService.getPaperMetaData(this.reg,this.sem,this.cid,date.value,time.value,marks.value, this.selectedBranch);
+    this.paperFormatService.getPaperMetaData(this.reg,this.sem,this.midNo,this.cid,date.value,time.value,marks.value, this.selectedBranch);
     this.router.navigate([this.reg, this.sem, this.cid]);
   }
    
@@ -60,7 +61,6 @@ export class HomeComponent implements OnInit {
     } else {
       this.selectedBranch = this.selectedBranch.filter(item => item !== branchName)
     }
-    console.log(this.selectedBranch)
   }  
 
   

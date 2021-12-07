@@ -19,10 +19,10 @@
   text-align: right;
 }
 
-.title{
+/* .title{
   display:flex;
   margin-left: 600px;
-}
+} */
 
 hr{
   width: 1000px;
@@ -39,6 +39,19 @@ h5{
 h6{
   text-align: center;
 }
+
+.logoImage{
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logoImage img{
+  margin: auto;
+  text-align: center;
+}
+
 
 .collegeName{
   font-style: "Trebuchet MS";

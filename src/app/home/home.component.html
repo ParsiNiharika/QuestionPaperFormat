@@ -19,6 +19,15 @@
         <option *ngFor="let i of semester" value={{i}}>{{i}}</option>
     </select>
     <br>
+    <br>
+    <label for="midNo">Choose a Mid Number:</label><br>
+    <select id="midNo" name="midNo" (click)="getMidNo($event.target.value)">
+        <option disabled selected value> -- select an option -- </option>
+        <option value='I'>I</option>
+        <option value='II'>II</option>
+    </select>
+    <br>
+    <br>
     <label for="date">Enter Date:</label><br>
     <input type="date" id="date"><br>
 

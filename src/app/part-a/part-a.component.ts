@@ -12,6 +12,7 @@ export class PartAComponent implements OnInit {
    blooms;
    partA: FormGroup;
    co:Array<String>;
+  midPartA;
   constructor(
     private dataService:DataService,
     private fb: FormBuilder,
@@ -27,42 +28,46 @@ export class PartAComponent implements OnInit {
          Q3:[''],
          Q4:[''],
          Q5:[''],
-         Q6:[''],
-         Q7:[''],
-         Q8:[''],
-         Q9:[''],
-         Q10:[''],
          b1:[''],
          b2:[''],
          b3:[''],
          b4:[''],
          b5:[''],
-         b6:[''],
-         b7:[''],
-         b8:[''],
-         b9:[''],
-         b10:[''],
          CO1:[''],
          CO2:[''],
          CO3:[''],
          CO4:[''],
          CO5:[''],
-         CO6:[''],
-         CO7:[''],
-         CO8:[''],
-         CO9:[''],
-         CO10:[''],
          M1:[''],
          M2:[''],
          M3:[''],
          M4:[''],
          M5:[''],
-         M6:[''],
-         M7:[''],
-         M8:[''],
-         M9:[''],
-         M10:[''],
     });
+
+    this.midPartA=this.paperFormatService.partAData;
+    this.partA.setValue({
+         Q1:this.midPartA.Q1,
+         Q2:this.midPartA.Q2,
+         Q3:this.midPartA.Q3,
+         Q4:this.midPartA.Q4,
+         Q5:this.midPartA.Q5,
+         b1:this.midPartA.b1,
+         b2:this.midPartA.b2,
+         b3:this.midPartA.b3,
+         b4:this.midPartA.b4,
+         b5:this.midPartA.b5,
+         CO1:this.midPartA.CO1,
+         CO2:this.midPartA.CO2,
+         CO3:this.midPartA.CO3,
+         CO4:this.midPartA.CO4,
+         CO5:this.midPartA.CO5,
+         M1:this.midPartA.M1,
+         M2:this.midPartA.M2,
+         M3:this.midPartA.M3,
+         M4:this.midPartA.M4,
+         M5:this.midPartA.M5,
+    })
     this.partA.valueChanges.subscribe((value) => {
       for(let i in this.partA.value){
         if(this.partA.value[i]==undefined){
