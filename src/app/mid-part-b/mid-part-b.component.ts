@@ -15,6 +15,7 @@ export class MidPartBComponent implements OnInit {
    co:Array<String>;
    imgs={'img1A':[],'img1B':[],'img2A':[],'img2B':[],'img3A':[],'img3B':[],'img4A':[],'img4B':[],'img5A':[],'img5B':[]}
    midPartB;
+  coOutcome: string[];
 
   constructor(
     private dataService:DataService,
@@ -25,6 +26,7 @@ export class MidPartBComponent implements OnInit {
   ngOnInit(): void {
     this.co=['CO1','CO2','CO3','CO4','CO5'];
     this.blooms=this.dataService.bloom;
+    this.coOutcome=this.dataService.coOutcome;
     this.partB = this.fb.group({
          Q1A:[''],
          Q1B:[''],

@@ -24,4 +24,5 @@ export class DataService {
     'IV-B.Tech-II-Semester',
   ];
   bloom=['L1','L2','L3','L4','L5'];
+  coOutcome=['CO1','CO2','CO3','CO4','CO5'];
 }

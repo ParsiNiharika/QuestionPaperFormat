@@ -1,292 +1,306 @@
-<div class="Heading1">
-    <div class="hallTicket">
-        <p class="d-inline">Hall ticket:</p>
-        <img src="assets\HallTicket.jpg">
-    </div>
-    <p class="courseCode">Course Code: {{cid}}</p>
-</div>
-<div class="logoImage">
-    <img src="assets\vardhaman_logo.png">
-</div>
 
-    <div class="collegeDetails">
-        <h6 class="semester">{{sem}} Continuous Assessment – {{midNo}}, {{months[dateFullFormat.getMonth()]}} - {{dateFullFormat.getFullYear()}}</h6>
-        <h6>(Regulations: VCE-{{reg}})</h6>
-        <h6>{{subject}}</h6>
-    </div>
+    <div id="content" #content>
+        <div class="Heading1">
+            <div class="hallTicket">
+                <p class="d-inline">Hall ticket:</p>
+                <img src="assets\HallTicket.jpg">
+            </div>
+            <p class="courseCode">Course Code: {{cid}}</p>
+        </div>
+        <div class="logoImage">
+            <img src="assets\vardhaman_logo.png">
+        </div>
+        
+            <div class="collegeDetails">
+                <h6 class="semester">{{sem}} Continuous Assessment – {{midNo}}, {{months[dateFullFormat.getMonth()]}} - {{dateFullFormat.getFullYear()}}</h6>
+                <h6>(Regulations: VCE-{{reg}})</h6>
+                <h6>{{subject}}</h6>
+            </div>
+        
+        <h6> {{branchTitle}} </h6>
+        <div class="DateTime">
+            <p class="date">Date: {{date}}</p>
+            <p class="time">Time: {{time}} Minutes</p>
+            <p class="marks">Max Marks: {{marks}}</p>
+        </div>
+        <br>
+        <div class="hr"></div>
+        <div>
+            <h5>Answer all Questions in Part-A</h5>
+            <h5>Answer any Three Questions in Part-B</h5>
+        </div>
+        <div class="hr"></div>
+        <br>
+        <div class="coForm">
+            <p class="sideHeading">Course Outcomes with Bloom’s Levels:</p>
+            <table class="table table-bordered">
+                <col style="width:7%">
+                <col style="width:50%">
+                <col style="width:7%">
+                <thead>
+                    <th>CO#</th>
+                    <th class="text-center">CO Statment</th>
+                    <th>Bloom's Level(L#)</th>
+                </thead>
+                <tr>
+                    <td>CO1</td>
+                    <td>{{paperCOData.CO1}}</td>
+                    <td>{{paperCOData.b1}}</td>
+                </tr>
+                <tr>
+                    <td>CO2</td>
+                    <td>{{paperCOData.CO2}}</td>
+                    <td>{{paperCOData.b2}}</td>
+                </tr>
+                <tr>
+                    <td>CO3</td>
+                    <td>{{paperCOData.CO3}}</td>
+                    <td>{{paperCOData.b3}}</td>
+                </tr>
+                <tr>
+                    <td>CO4</td>
+                    <td>{{paperCOData.CO4}}</td>
+                    <td>{{paperCOData.b4}}</td>
+                </tr>
+                <tr>
+                    <td>CO5</td>
+                    <td>{{paperCOData.CO5}} </td>
+                    <td>{{paperCOData.b5}}</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- part-A -->
+        
+        <br>
+        <div class="questionPaper">
+            <p class="sideHeading">Questions:</p>
+            <table class="table table-bordered">
+                <col style="width:3%">
+                <col style="width:3%">
+                <col style="width:50%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <thead>
+                    <tr>
+                        <td colspan="6" class="topicHeading">PART-A</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <th class="text-center">Course Outcome</th>
+                        <th class="text-center">Bloom’s Level</th>
+                        <th class="text-center">Marks</th>
+                    </tr>
+                </thead>
+        
+                <tr>
+                    <td>1.</td>
+                    <td>a)</td>
+                    <td>{{paperPartA.Q1}} </td>
+                    <td class="text-center">{{paperPartA.CO1}}</td>
+                    <td class="text-center">{{paperPartA.b1}}</td>
+                    <td class="text-center">{{paperPartA.M1}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>b)</td>
+                    <td>{{paperPartA.Q2}} </td>
+                    <td class="text-center">{{paperPartA.CO2}}</td>
+                    <td class="text-center">{{paperPartA.b2}}</td>
+                    <td class="text-center">{{paperPartA.M2}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>c)</td>
+                    <td>{{paperPartA.Q3}} </td>
+                    <td class="text-center">{{paperPartA.CO3}}</td>
+                    <td class="text-center">{{paperPartA.b3}}</td>
+                    <td class="text-center">{{paperPartA.M3}}</td>
+                </tr>
+                <tr *ngIf="paperPartA.Q4!=''">
+                    <td></td>
+                    <td>d)</td>
+                    <td>{{paperPartA.Q4}} </td>
+                    <td class="text-center">{{paperPartA.CO4}}</td>
+                    <td class="text-center">{{paperPartA.b4}}</td>
+                    <td class="text-center">{{paperPartA.M4}}</td>
+                </tr>
+                <tr  *ngIf="paperPartA.Q5!=''">
+                    <td></td>
+                    <td>e)</td>
+                    <td>{{paperPartA.Q5}} </td>
+                    <td class="text-center">{{paperPartA.CO5}}</td>
+                    <td class="text-center">{{paperPartA.b5}}</td>
+                    <td class="text-center">{{paperPartA.M5}}</td>
+                </tr>
+                <!-- <tr>
+                    <td></td>
+                    <td>f)</td>
+                    <td>{{paperPartA.Q6}} </td>
+                    <td class="text-center">{{paperPartA.CO6}}</td>
+                    <td class="text-center">{{paperPartA.b6}}</td>
+                    <td class="text-center">{{paperPartA.M6}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>g)</td>
+                    <td>{{paperPartA.Q7}} </td>
+                    <td class="text-center">{{paperPartA.CO7}}</td>
+                    <td class="text-center">{{paperPartA.b7}}</td>
+                    <td class="text-center">{{paperPartA.M7}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>h)</td>
+                    <td>{{paperPartA.Q8}} </td>
+                    <td class="text-center">{{paperPartA.CO8}}</td>
+                    <td class="text-center">{{paperPartA.b8}}</td>
+                    <td class="text-center">{{paperPartA.M8}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>i)</td>
+                    <td>{{paperPartA.Q9}} </td>
+                    <td class="text-center">{{paperPartA.CO9}}</td>
+                    <td class="text-center">{{paperPartA.b9}}</td>
+                    <td class="text-center">{{paperPartA.M9}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>j)</td>
+                    <td>{{paperPartA.Q10}} </td>
+                    <td class="text-center">{{paperPartA.CO10}}</td>
+                    <td class="text-center">{{paperPartA.b10}}</td>
+                    <td class="text-center">{{paperPartA.M10}}</td>
+                </tr> -->
+                </table>
+                <div class="questionPaper">
+                <table class="table table-bordered">
+                 <col style="width:3%">
+                <col style="width:3%">
+                <col style="width:50%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <tr>
+                    <td colspan="6" class="topicHeading">PART-B</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>a)</td>
+                    <td>
+                        {{paperPartB.Q1A}} <br>
+                        <img *ngFor="let url of partBImg['img1A']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO1A}}</td>
+                    <td class="text-center">{{paperPartB.b1A}}</td>
+                    <td class="text-center">{{paperPartB.M1A}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>b)</td>
+                    <td>{{paperPartB.Q1B}} <br>
+                    <img *ngFor="let url of partBImg['img1B']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO1B}}</td>
+                    <td class="text-center">{{paperPartB.b1B}}</td>
+                    <td class="text-center">{{paperPartB.M1B}}</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="padding:15px;"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>a)</td>
+                    <td>{{paperPartB.Q2A}}<br>
+                    <img *ngFor="let url of partBImg['img2A']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO2A}}</td>
+                    <td class="text-center">{{paperPartB.b2A}}</td>
+                    <td class="text-center">{{paperPartB.M2A}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>b)</td>
+                    <td>{{paperPartB.Q2B}} <br>
+                    <img *ngFor="let url of partBImg['img2B']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO2B}}</td>
+                    <td class="text-center">{{paperPartB.b2B}}</td>
+                    <td class="text-center">{{paperPartB.M2B}}</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="padding:15px;"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>a)</td>
+                    <td>{{paperPartB.Q3A}} <br>
+                    <img *ngFor="let url of partBImg['img3A']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO3A}}</td>
+                    <td class="text-center">{{paperPartB.b3A}}</td>
+                    <td class="text-center">{{paperPartB.M3A}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>b)</td>
+                    <td>{{paperPartB.Q3B}} <br>
+                    <img *ngFor="let url of partBImg['img3B']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO3B}}</td>
+                    <td class="text-center">{{paperPartB.b3B}}</td>
+                    <td class="text-center">{{paperPartB.M3B}}</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="padding:15px;"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>a)</td>
+                    <td>{{paperPartB.Q4A}} <br>
+                    <img *ngFor="let url of partBImg['img4A']" [src]="url" alt="" width="300" height="300">
+                </td>
+                    <td class="text-center">{{paperPartB.CO4A}}</td>
+                    <td class="text-center">{{paperPartB.b4A}}</td>
+                    <td class="text-center">{{paperPartB.M4A}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>b)</td>
+                    <td>{{paperPartB.Q4B}} <br>
+                    <img *ngFor="let url of partBImg['img4B']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO4B}}</td>
+                    <td class="text-center">{{paperPartB.b4B}}</td>
+                    <td class="text-center">{{paperPartB.M4B}}</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="padding:15px;"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>a)</td>
+                    <td>{{paperPartB.Q5A}} <br>
+                    <img *ngFor="let url of partBImg['img5A']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO5A}}</td>
+                    <td class="text-center">{{paperPartB.b5A}}</td>
+                    <td class="text-center">{{paperPartB.M5A}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>b)</td>
+                    <td>{{paperPartB.Q5B}} <br>
+                    <img *ngFor="let url of partBImg['img5B']" [src]="url" alt="" width="300" height="300">
+                    </td>
+                    <td class="text-center">{{paperPartB.CO5B}}</td>
+                    <td class="text-center">{{paperPartB.b5B}}</td>
+                    <td class="text-center">{{paperPartB.M5B}}</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </div> 
 
-<h6> {{branchTitle}} </h6>
-<div class="DateTime">
-    <p class="date">Date: {{date}}</p>
-    <p class="time">Time: {{time}} Minutes</p>
-    <p class="marks">Max Marks: {{marks}}</p>
-</div>
-<br>
-<hr>
-<div>
-    <h5>Answer all Questions in Part-A</h5>
-    <h5>Answer any Three Questions in Part-B</h5>
-</div>
-<hr>
-
-<div class="coForm">
-    <p class="sideHeading">Course Outcomes with Bloom’s Levels:</p>
-    <table class="table table-bordered">
-        <col style="width:7%">
-        <col style="width:50%">
-        <col style="width:7%">
-        <thead>
-            <th>CO#</th>
-            <th>CO Statment</th>
-            <th>Bloom's Level(L#)</th>
-        </thead>
-        <tr>
-            <td>CO1</td>
-            <td>{{paperCOData.CO1}}</td>
-            <td>{{paperCOData.b1}}</td>
-        </tr>
-        <tr>
-            <td>CO2</td>
-            <td>{{paperCOData.CO2}}</td>
-            <td>{{paperCOData.b2}}</td>
-        </tr>
-        <tr>
-            <td>CO3</td>
-            <td>{{paperCOData.CO3}}</td>
-            <td>{{paperCOData.b3}}</td>
-        </tr>
-        <tr>
-            <td>CO4</td>
-            <td>{{paperCOData.CO4}}</td>
-            <td>{{paperCOData.b4}}</td>
-        </tr>
-        <tr>
-            <td>CO5</td>
-            <td>{{paperCOData.CO5}} </td>
-            <td>{{paperCOData.b5}}</td>
-        </tr>
-    </table>
-</div>
-
-<!-- part-A -->
-
-
-<div class="questionPaper">
-    <p class="sideHeading">Questions:</p>
-    <table class="table table-bordered">
-        <col style="width:3%">
-        <col style="width:3%">
-        <col style="width:50%">
-        <col style="width:8%">
-        <col style="width:8%">
-        <col style="width:8%">
-        <thead>
-            <tr>
-                <td colspan="6" class="topicHeading">PART-A</td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <th>Course Outcome</th>
-                <th>Bloom’s Level</th>
-                <th>Marks</th>
-            </tr>
-        </thead>
-
-        <tr>
-            <td>1.</td>
-            <td>a)</td>
-            <td>{{paperPartA.Q1}} </td>
-            <td>{{paperPartA.CO1}}</td>
-            <td>{{paperPartA.b1}}</td>
-            <td>{{paperPartA.M1}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>b)</td>
-            <td>{{paperPartA.Q2}} </td>
-            <td>{{paperPartA.CO2}}</td>
-            <td>{{paperPartA.b2}}</td>
-            <td>{{paperPartA.M2}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>c)</td>
-            <td>{{paperPartA.Q3}} </td>
-            <td>{{paperPartA.CO3}}</td>
-            <td>{{paperPartA.b3}}</td>
-            <td>{{paperPartA.M3}}</td>
-        </tr>
-        <tr *ngIf="paperPartA.Q4!=''">
-            <td></td>
-            <td>d)</td>
-            <td>{{paperPartA.Q4}} </td>
-            <td>{{paperPartA.CO4}}</td>
-            <td>{{paperPartA.b4}}</td>
-            <td>{{paperPartA.M4}}</td>
-        </tr>
-        <tr  *ngIf="paperPartA.Q5!=''">
-            <td></td>
-            <td>e)</td>
-            <td>{{paperPartA.Q5}} </td>
-            <td>{{paperPartA.CO5}}</td>
-            <td>{{paperPartA.b5}}</td>
-            <td>{{paperPartA.M5}}</td>
-        </tr>
-        <!-- <tr>
-            <td></td>
-            <td>f)</td>
-            <td>{{paperPartA.Q6}} </td>
-            <td>{{paperPartA.CO6}}</td>
-            <td>{{paperPartA.b6}}</td>
-            <td>{{paperPartA.M6}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>g)</td>
-            <td>{{paperPartA.Q7}} </td>
-            <td>{{paperPartA.CO7}}</td>
-            <td>{{paperPartA.b7}}</td>
-            <td>{{paperPartA.M7}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>h)</td>
-            <td>{{paperPartA.Q8}} </td>
-            <td>{{paperPartA.CO8}}</td>
-            <td>{{paperPartA.b8}}</td>
-            <td>{{paperPartA.M8}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>i)</td>
-            <td>{{paperPartA.Q9}} </td>
-            <td>{{paperPartA.CO9}}</td>
-            <td>{{paperPartA.b9}}</td>
-            <td>{{paperPartA.M9}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>j)</td>
-            <td>{{paperPartA.Q10}} </td>
-            <td>{{paperPartA.CO10}}</td>
-            <td>{{paperPartA.b10}}</td>
-            <td>{{paperPartA.M10}}</td>
-        </tr> -->
-        <tr>
-            <td colspan="6" class="topicHeading">PART-B</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>a)</td>
-            <td>
-                {{paperPartB.Q1A}} <br>
-                <img *ngFor="let url of partBImg['img1A']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO1A}}</td>
-            <td>{{paperPartB.b1A}}</td>
-            <td>{{paperPartB.M1A}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>b)</td>
-            <td>{{paperPartB.Q1B}} <br>
-            <img *ngFor="let url of partBImg['img1B']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO1B}}</td>
-            <td>{{paperPartB.b1B}}</td>
-            <td>{{paperPartB.M1B}}</td>
-        </tr>
-        <tr>
-            <td colspan="6" style="padding:15px;"></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>a)</td>
-            <td>{{paperPartB.Q2A}}<br>
-            <img *ngFor="let url of partBImg['img2A']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO2A}}</td>
-            <td>{{paperPartB.b2A}}</td>
-            <td>{{paperPartB.M2A}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>b)</td>
-            <td>{{paperPartB.Q2B}} <br>
-            <img *ngFor="let url of partBImg['img2B']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO2B}}</td>
-            <td>{{paperPartB.b2B}}</td>
-            <td>{{paperPartB.M2B}}</td>
-        </tr>
-        <tr>
-            <td colspan="6" style="padding:15px;"></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>a)</td>
-            <td>{{paperPartB.Q3A}} <br>
-            <img *ngFor="let url of partBImg['img3A']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO3A}}</td>
-            <td>{{paperPartB.b3A}}</td>
-            <td>{{paperPartB.M3A}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>b)</td>
-            <td>{{paperPartB.Q3B}} <br>
-            <img *ngFor="let url of partBImg['img3B']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO3B}}</td>
-            <td>{{paperPartB.b3B}}</td>
-            <td>{{paperPartB.M3B}}</td>
-        </tr>
-        <tr>
-            <td colspan="6" style="padding:15px;"></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>a)</td>
-            <td>{{paperPartB.Q4A}} <br>
-            <img *ngFor="let url of partBImg['img4A']" [src]="url" alt="" width="300" height="300">
-        </td>
-            <td>{{paperPartB.CO4A}}</td>
-            <td>{{paperPartB.b4A}}</td>
-            <td>{{paperPartB.M4A}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>b)</td>
-            <td>{{paperPartB.Q4B}} <br>
-            <img *ngFor="let url of partBImg['img4B']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO4B}}</td>
-            <td>{{paperPartB.b4B}}</td>
-            <td>{{paperPartB.M4B}}</td>
-        </tr>
-        <tr>
-            <td colspan="6" style="padding:15px;"></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>a)</td>
-            <td>{{paperPartB.Q5A}} <br>
-            <img *ngFor="let url of partBImg['img5A']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO5A}}</td>
-            <td>{{paperPartB.b5A}}</td>
-            <td>{{paperPartB.M5A}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>b)</td>
-            <td>{{paperPartB.Q5B}} <br>
-            <img *ngFor="let url of partBImg['img5B']" [src]="url" alt="" width="300" height="300">
-            </td>
-            <td>{{paperPartB.CO5B}}</td>
-            <td>{{paperPartB.b5B}}</td>
-            <td>{{paperPartB.M5B}}</td>
-        </tr>
-    </table>
-</div>

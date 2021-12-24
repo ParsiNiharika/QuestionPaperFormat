@@ -1,4 +1,8 @@
-<div class="coForm">
+<div class="jumbotron border m-5 p-5 bg-light">
+  <div class="text-center text-primary h1">
+    QUESTION PAPER GENERATOR
+</div>
+<div class="coForm ">
   <form action="" id="contactform" [formGroup]="coForm">
     <table class="table table-bordered">
       <thead>
@@ -66,8 +70,9 @@
 </div>
 <app-part-a></app-part-a>
 <app-mid-part-b></app-mid-part-b>
-<div class="mx-auto">
-  <button class="btn btn-primary mt-2 mb-2 text-center" (click)="moveToPaper()">Genrate paper</button>
+<div class="text-center mt-5">
+  <button class="btn btn-primary mt-2 mb-2 text-center p-3 " (click)="moveToPaper()">Genrate paper</button>
+</div>
 </div>
 <!-- <button type="submit" (click)="visibility()" (click)="mid()">MID PAPER</button>
 <button type="submit" (click)="visibility()" (click)="sem()">SEMESTER PAPER</button>

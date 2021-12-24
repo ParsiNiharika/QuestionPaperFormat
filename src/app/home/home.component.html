@@ -1,48 +1,58 @@
-<div class="home">
-    <label for="regulation">Choose a regulation:</label><br>
-    <select id="regulation" name="regulation" (click)="getRegulation($event.target.value)">
-        <option disabled selected value> -- select an option -- </option>
-        <option *ngFor="let i of data" value={{i}}>{{i}}</option>
-    </select>
-    <br>
-    <br>
-    <label for="courseId">Choose a Course:</label><br>
-    <select id="courseId" name="courseId" (click)="getCourseId($event.target.value)">
-        <option disabled selected value> -- select an option -- </option>
-        <option *ngFor="let i of courseIds" value={{i}}>{{i}}</option>
-    </select>
-    <p>Subject:{{subject}}</p>
-
-    <label for="sem">Choose a Semester:</label><br>
-    <select id="sem" name="sem" (click)="getSem($event.target.value)">
-        <option disabled selected value> -- select an option -- </option>
-        <option *ngFor="let i of semester" value={{i}}>{{i}}</option>
-    </select>
-    <br>
-    <br>
-    <label for="midNo">Choose a Mid Number:</label><br>
-    <select id="midNo" name="midNo" (click)="getMidNo($event.target.value)">
-        <option disabled selected value> -- select an option -- </option>
-        <option value='I'>I</option>
-        <option value='II'>II</option>
-    </select>
-    <br>
-    <br>
-    <label for="date">Enter Date:</label><br>
-    <input type="date" id="date"><br>
-
-    <label for="marks">Enter Marks:</label><br>
-    <input type="number" id="marks"><br>
-
-    <label for="time">Enter Time:</label><br>
-    <input type="number" id="time"><br>
-
-    <div *ngFor="let branch of branches">
-        <input type="checkbox" (change)="checkBoxValue(branch, $event.target.checked)" />
-        {{ branch }}
+<div class="jumbotron border m-5 p-5 bg-light">
+    <div class="text-center text-primary h1">
+        QUESTION PAPER GENERATOR
     </div>
-
-    <button type="submit"  class="btn btn-primary mt-4 mb-2 text-center" (click)="go()">Open Question Paper</button>
-
-
+    <div class="home row">
+        <div class="col-5 form">
+            <label class="text-center text-primary h5" for="regulation">Choose a regulation:</label>
+            <select id="regulation" name="regulation"  class="form-control w-50" (click)="getRegulation($event.target.value)">
+                <option disabled selected value> -- select an option -- </option>
+                <option *ngFor="let i of data" value={{i}}>{{i}}</option>
+            </select>
+            
+            
+            <label class="text-center text-primary h5" for="courseId">Choose a Course:</label>
+            <select id="courseId" name="courseId" class="form-control w-50" (click)="getCourseId($event.target.value)">
+                <option disabled selected value> -- select an option -- </option>
+                <option *ngFor="let i of courseIds" value={{i}}>{{i}}</option>
+            </select>
+            <br>
+            <p  ><span class="text-primary h5">Subject:</span>{{subject}}</p>
+    
+            <label class="text-center text-primary h5" for="sem">Choose a Semester:</label>
+            <select id="sem" name="sem"  class="form-control w-50" (click)="getSem($event.target.value)">
+                <option disabled selected value> -- select an option -- </option>
+                <option *ngFor="let i of semester" value={{i}}>{{i}}</option>
+            </select>
+            
+            
+            <label class="text-center text-primary h5" for="midNo">Choose a Mid Number:</label>
+            <select id="midNo" name="midNo" class="form-control w-50" (click)="getMidNo($event.target.value)">
+                <option disabled selected value> -- select an option -- </option>
+                <option value='I'>I</option>
+                <option value='II'>II</option>
+            </select>
+            
+            
+            <label class="text-center text-primary h5" for="date">Enter Date:</label>
+            <input  class="form-control w-50" type="date" id="date">
+    
+            <label class="text-center text-primary h5" for="marks">Enter Marks:</label>
+            <input class="form-control w-50" type="number" id="marks">
+    
+            <label class="text-center text-primary h5" for="time">Enter Time:</label>
+            <input class="form-control w-50" type="number" id="time">
+    
+            <div *ngFor="let branch of branches">
+                <input class="form-check-input" type="checkbox" (change)="checkBoxValue(branch, $event.target.checked)" />
+                {{ branch }}
+            </div>
+    
+            <button class="form-control w-50" type="submit" class="btn btn-primary mt-4 mb-2 text-center" (click)="go()">Open Question Paper</button>
+    
+        </div>
+        <div class="col-6">
+            <img src="assets\home.jpeg" width:10px>
+        </div>
+    </div>
 </div>

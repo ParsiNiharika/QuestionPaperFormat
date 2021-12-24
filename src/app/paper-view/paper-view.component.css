@@ -1,10 +1,12 @@
+#content{
+  width: 1000px;
+}
 .Heading1 {
   width:1000px;
   text-align:center;
   display: block;
   height:70px;
   font-weight: bold;
-  margin:auto;
 }
 
 .hallTicket {
@@ -19,14 +21,13 @@
   text-align: right;
 }
 
-/* .title{
-  display:flex;
-  margin-left: 600px;
-} */
 
-hr{
+
+.hr{
   width: 1000px;
-  margin:auto;
+  border-bottom-width: 2px;
+  border-bottom-color: black;
+  border-bottom-style: solid;
 }
 
 h5{
@@ -42,13 +43,11 @@ h6{
 
 .logoImage{
   width: 1000px;
-  margin: auto;
   display: flex;
   justify-content: center;
 }
 
 .logoImage img{
-  margin: auto;
   text-align: center;
 }
 
@@ -77,19 +76,18 @@ h6{
   height:25px;
   margin-top: 5px;
   font-weight: bold;
-  margin:auto;
 }
 
 .date {
   float:left;
-  width:400px;
+  width:320px;
   text-align: left;
 }
 
 .time {
   display: inline-block;
   margin:0 auto;
-  width:250px;
+  width:200px;
 }
 
 .marks {
@@ -103,12 +101,14 @@ table {
     table-layout: fixed;
     width: 1000px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     border: solid 1px black;
   }
   td,
   th,tr {
     border: solid 1px black;
+    font-size: 15px;
+    font-family: 'Calibri';
   }
 table{
   border-collapse: collapse;

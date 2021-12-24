@@ -13,6 +13,7 @@ export class PartAComponent implements OnInit {
    partA: FormGroup;
    co:Array<String>;
   midPartA;
+  coOutcome: string[];
   constructor(
     private dataService:DataService,
     private fb: FormBuilder,
@@ -22,6 +23,7 @@ export class PartAComponent implements OnInit {
   ngOnInit(): void {
     this.co=['CO1','CO2','CO3','CO4','CO5'];
     this.blooms=this.dataService.bloom;
+    this.coOutcome=this.dataService.coOutcome;
     this.partA = this.fb.group({
          Q1:[''],
          Q2:[''],
